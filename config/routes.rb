@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get 'user/new'
 
   root 'static_pages#home'
@@ -6,7 +8,7 @@ Rails.application.routes.draw do
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
-
+  get 'signup' => 'users#new'
   resources :microposts
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
